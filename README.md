@@ -22,7 +22,7 @@ Programs are organized day-wise and topic-wise for better understanding.
 
 Example:
 BASIC
-Day01 - Two numbers ka sum print karo.
+Day01 - Two numbers ka sum print karo. 
 Day02 - Two numbers ka difference print karo.
 Day03 - Two numbers ka multiplication karo.
 Day04 - Two numbers ka division karo.
