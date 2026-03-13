@@ -38,26 +38,77 @@
 
 
 
-n = int(input("Enter the elngth of array: "))
+# n = int(input("Enter the elngth of array: "))
 
-array = []
+# array = []
 
-for i in range(n):
-    i = int(input("Enter the values: "))
-    array.append(i)
+# for i in range(n):
+#     i = int(input("Enter the values: "))
+#     array.append(i)
 
-print(f"Original array {array}")
+# print(f"Original array {array}")
 
-if len(array) == 0:
-    print("The array is empty.")
-else:
+# if len(array) == 0:
+#     print("The array is empty.")
+# else:
     
-    for x in range(n):
-        main_index = x
-        for j in range(x+1,n):
+#     for x in range(n):
+#         main_index = x
+#         for j in range(x+1,n):
             
-            if array[j] < array[main_index]:
-                main_index = j
-        array[x], array[main_index] = array[main_index], array[x]
+#             if array[j] < array[main_index]:
+#                 main_index = j
+#         array[x], array[main_index] = array[main_index], array[x]
         
-print(f"Sorted array {array}")
+# print(f"Sorted array {array}")
+
+
+
+
+# Bubbole Sort or Selection sort both
+
+# Function for bubble sort
+def bubble_sort(array):
+    n = len(array)
+    for i in range(n):
+        for j in range (0,n-i-1):
+            if array[j] > array[j+1]:
+                temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+    return array
+
+# Function for selection sort
+def selection_sort(array):
+    n = len(array)
+    for i in range(n):
+        min_index = i
+        for j in range(i+1,n):
+            if array[j] < min_index:
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
+        
+    return array
+
+# Mian program
+n = int(input("Enter the length of array: "))
+original_array = []
+
+for x in range(n):
+    original_array.append(int(input(f"Values {x+1}")))
+    
+print(f"Original array {original_array}")
+print("1. Bubble sort")
+print("2. Selection srot")
+
+choice = int(input("Choose the algorithms. {1/2}"))
+
+temp_array = original_array.copy()
+if choice == 1:
+    result = bubble_sort(temp_array)
+    print(f"Sorted array using bubble sort algorithm: {result}")
+elif choice == 2:
+    result = selection_sort(temp_array)
+    print(f"Sorted array using selection sort algorithm: {result}")
+else:
+    print("Invalit choice.")
