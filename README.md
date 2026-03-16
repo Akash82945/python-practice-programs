@@ -21,7 +21,8 @@ The goal of this repository is to improve my Python coding skills, develop logic
 Programs are organized day-wise and topic-wise for better understanding.
 
 Example:
-BASIC
+
+## 🔁 Level  – Bacis (Completed ✅)
 
 1. Two numbers ka sum print karo. 
 2. Two numbers ka difference print karo.
@@ -35,7 +36,7 @@ BASIC
 10. User se number lo aur uska cube print karo.
 
 
-## 🔁 Level 2 – Loops Practice
+## 🔁 Level 2 – Loops Practice (Completed ✅)
 
 These programs help in understanding **loops and iteration in Python**.
 
@@ -72,17 +73,35 @@ These programs help in building **strong logical thinking** in Python.
 
 These programs help in understanding **Python lists and basic data manipulation**.
 
-41. Find the largest number in a list
-42. Find the smallest number in a list
-43. Calculate the sum of list elements
-44. Calculate the average of list elements
-45. Reverse a list
-46. Find duplicate numbers in a list
-47. Print even numbers from a list
-48. Print odd numbers from a list
-49. Sort a list
-50. Find the second largest number in a list
+31. Find the largest number in a list
+32. Find the smallest number in a list
+33. Calculate the sum of list elements
+34. Calculate the average of list elements
+35. Reverse a list
+36. Find duplicate numbers in a list
+37. Print even numbers from a list
+38. Print odd numbers from a list
+39. Sort a list
+40. Find the second largest number in a list
 
+## 🔤 Level 5 – String Practice (Completed ✅)
+
+These programs focus on **string manipulation and text processing in Python**.
+
+41. Reverse a string
+42. Check if a string is a palindrome
+43. Count vowels in a string
+44. Count words in a sentence
+45. Convert uppercase letters to lowercase
+46. Convert lowercase letters to uppercase
+47. Count characters in a string
+48. Find the longest word in a sentence
+49. Remove spaces from a string
+50. Build a simple password strength checker
+
+---
+
+✅ **Status:** Completed
 
 
 
