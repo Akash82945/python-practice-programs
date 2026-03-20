@@ -9,4 +9,4 @@ def count_vowels(string):
             count += 1
     return count
         
-print(count_vowels("Akash").lower())
+print(count_vowels("Akash"))
