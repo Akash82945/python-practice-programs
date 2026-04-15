@@ -98,5 +98,3 @@ print(f'''
       {emp2.promotion()}
       {emp2.emp_details()}
       ''')
-
-# print(emp2.emp_details())
