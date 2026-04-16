@@ -40,7 +40,7 @@ class constructor_example():
         if isinstance (self.marks,list):
             average = sum(self.marks) / len(self.marks) if self.marks else 0
             self.average = average
-        return
+        return f"{average:.2f}"
     
     def student_details(self):
         return f"""
