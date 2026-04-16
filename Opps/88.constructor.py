@@ -8,10 +8,22 @@ class constructor_example():
         self.marks = None
         
     def s_marks(self):
-        user_input = input(f"Enter each  subject  Marks, Seperated by space : ")
-        new_marks = [ int(x) for x in user_input.split()]
-        self.marks = new_marks
-        return
+        
+        subject_count = len(self.subject)
+        
+        if subject_count == 0:
+            return "Enter Subject First"
+        
+        while True:
+            user_input = input(f"Enter each {subject_count} subject  Marks, Seperated by space : ")
+            new_marks = [ int(x) for x in user_input.split()]
+            
+            if len(new_marks) == subject_count:
+                self.marks = new_marks
+                break
+            else:
+                print("oops try again!")
+    
     
     def result(self):
         if isinstance(self.marks,list):
