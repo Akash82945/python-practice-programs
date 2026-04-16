@@ -23,6 +23,11 @@ class constructor_example():
                 break
             else:
                 print("oops try again!")
+                
+    def total(self):
+        if isinstance (self.marks,list):
+            total = sum(self.marks)
+        return total
     
     
     def result(self):
@@ -61,6 +66,7 @@ class constructor_example():
     student Subject : {self.subject} 
     Student Class : {self.s_class}
     Student Marks : {self.marks}
+    Total Marks : {self.total()}
     Student Average Marks : {self.average()}
     Student Result : {self.result()} 
     """
