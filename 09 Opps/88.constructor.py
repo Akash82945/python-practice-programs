@@ -72,7 +72,7 @@ class constructor_example():
     """
     
 student1 = constructor_example("Ankit",2304324,'AIML')
-
+# see result
 student1.subjects()
 student1.s_marks()
 student1.result()
