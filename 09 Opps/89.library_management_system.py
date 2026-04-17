@@ -9,6 +9,15 @@ class Library():
         self.status = status
         self.sr_no = sr_no
         
+    def book_issue(self):
+        if self.status == 'Availabe':
+            self.status = "Issue"
+            return 
+        else:
+            return 
+            
+        
+          
     def details (self):
         return f"""
     Book Name : {self.book_name}
@@ -21,5 +30,7 @@ class Library():
     """
     
 student1 = Library('Physics',1342,'Newton','Science',599,'Received',12)
+student1.book_issue()
+
 print(student1.details())
     
