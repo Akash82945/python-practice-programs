@@ -1,68 +1,90 @@
-# class Library():
+
+class Book():
     
-#     def __init__ (self,book_name,book_id,author,category,price,status,sr_no):
-#         self.book_name = book_name
-#         self.book_id = book_id
-#         self.author = author
-#         self.category = category
-#         self.price = price
-#         self.status = status
-#         self.sr_no = sr_no
-#         self.all_books = []
+    def __init__(self,book_id,title,author):
+        self.book_ID = book_id
+        self.title = title
+        self.author = author
+        self.status = "Available"
         
-#     def book_issue(self):
-#         if self.status == 'Available':
-#             self.status = "Issue"
-#             return 
-#         else:
-#             return 
+    def __str__(self):
+        return f"""
+    Book ID : {self.book_ID}
+    Book Title : {self.title}
+    Author : {self.author}
+    """
+
+class Member:
+    
+    def __init__(self,member_id,name):
+        self.member_id = member_id
+        self.name = name
+        self.issued_book = []
+        
+    def __str__(self):
+        return f"""
+    Member Name : {self.name}
+    Member ID : {self.member_id}
+    Books : {[b.title for b in self.issued_book]}
+    """
+    
+class Library:
+    
+    def __init__(self):
+        self.books = {}
+        self.members = {}
+        
+    def add_books(self,book_id,title,author):
+        new_book = Book(book_id,title,author)
+        self.books[book_id] = new_book
+        return 'book added.'
+    
+    def add_member(self,member_id,name):
+        new_member = Member(member_id,name)
+        self.members[member_id] = new_member
+        return "Member Add Successfully."
+    
+    def issued_book(self,m_id,b_id):
+        if b_id in self.books and m_id in self.members:
+            book = self.books[b_id]
+            member = self.members[m_id]
             
-#     def add_add(self):
-#         user_input = input("Enter new Book : ")
-#         user_input2 = int(input("Enter Book ID : "))
-#         self.book_id = self.book_id.append(user_input2)
-#         self.book_name = self.book_name.append(user_input)
-#         return 
-    
-#     def search_book(self):
-#         search = int(input("Enter name or id : "))
-#         if self.book_id == search or self.book_name == search:
-#             return f"Book Find : {self.book_id} / {self.book_name}"
-    
-#     def display_all_book(self):
-#         return self.all_books
-    
-    
-#     def details (self):
-#         return f"""
-#     Book Name : {self.book_name}
-#     Book id : {self.book_id}
-#     Book Author : {self.author}
-#     Book category : {self.category}
-#     Book Price : {self.price}
-#     Book Status : {self.status}
-#     Book sr_no : {self.sr_no}
-#     """
-    
-
-# class student(Library):
-    
-#     def __init__(self,student_id,student_name,book_list):
-#         super().__init__(student_id,student_name,book_list)
-#         self.student_id = student_id
-#         self.student_name = student_name
-#         self.book_list = book_list
+            if book.status == "Available":
+                book.status = "Issued"
+                member.issued_book.append(book)
+                return f"Success: {book.title} issued to {member.name}"
+            
+            else:
+                return "Error Book is already issued."
+        else:
+            return "Error: Invalid User ID or Book ID."
         
-#     def details(self):
-#         basic = super().details()
-#         return basic + f"\nStudent Name : {self.student_id}\nStudent ID : {self.student_id}\nIssued Books : {self.book_list}"
+    def return_book(self,m_id,b_id):
+        if b_id in self.books and m_id in self.members:
+            book = self.books[b_id]
+            member = self.members[m_id]
+            
+            if book in member.issued_book:
+                book_status = "Available"
+                member.issued_book.remove(book)
+                return f"Succes: {book.title} returned by {member.name}"
+            else:
+                return f"Erroe: This book was nt issued."
+        else:
+            return "Error: Record not found"
+        
+    def display_status(self):
+        print("\n === Current Library Status ===")
+        for b in self.books.values():
+            print(b)
+            
+        print("-------------------------------\n")
+        
+my_lib = Library()
 
+my_lib.add_books(101,"Python","Guido van Rossum")
+my_lib.add_books(102,"Data Science","Jhon Smith")
+my_lib.add_member(11,'Akash')
 
-    
-# student1 = student('Physics',1342,'Newton','Science',599,'Received',12)
-# student1.book_issue()
-
-# print(student1.details())
-    
-    
-    
+print(my_lib.issued_book(11,101))
+my_lib.display_status()

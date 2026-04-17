@@ -1,4 +1,4 @@
-class constructor_example():
+class constructor_example:
     
     def __init__(self,name,roll_no,s_class):
         self.name = name
