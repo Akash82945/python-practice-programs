@@ -77,7 +77,6 @@ class Library:
         print("\n === Current Library Status ===")
         for b in self.books.values():
             print(b)
-            
         print("-------------------------------\n")
         
 my_lib = Library()
