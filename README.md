@@ -130,7 +130,7 @@ These programs focus on **string manipulation and text processing in Python**.
 
 
 
-## ⚙️ Level 8 – File Handling ( In progress )
+## ⚙️ Level 8 – File Handling ( Completed. )
 
 71. Create File and Write Content.
 72. Read Content from File.
@@ -143,6 +143,21 @@ These programs focus on **string manipulation and text processing in Python**.
 79. Replace word in File.
 80. Create simple Log System.
 
+
+
+## ⚙️ Level 9 – OOPs ( Completed. )
+
+
+81. Create Student Class.
+82. Calculate area of rectange.
+83. Class of bank account.
+84. Car Class.
+85. Employee Class.
+86. Inheritance Class.
+87. Overriging Method.
+88. Constructor Example.
+89. Libraby Management Class.
+90. Simple calculater class.
 
 ---
 
