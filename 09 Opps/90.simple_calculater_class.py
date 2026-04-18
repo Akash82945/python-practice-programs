@@ -7,7 +7,8 @@ class calculater():
     def get_input(self):
         self.x = int(input("Enter Value of x : "))
         self.y = int(input("Enter Value of y : "))
-        
+        return 
+    
     def addition(self):
         sum = self.x + self.y
         return sum
@@ -24,9 +25,10 @@ class calculater():
         while True:
             if self.y == 0:
                 print("Error! Zero Division Not Possible. Try Again")
+                self.get_input()
             else:
                 div = self.x / self.y
-            return div
+                return div
     
     def square(self):
         user_input = int(input("Enter number for finding square : "))
