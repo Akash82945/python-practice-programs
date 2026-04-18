@@ -9,6 +9,10 @@ class calculater():
         self.y = int(input("Enter Value of y : "))
         return 
     
+    def y_input(self):
+        self.y = int(input("Enter Value of y : "))
+        return
+    
     def addition(self):
         sum = self.x + self.y
         return sum
@@ -25,19 +29,18 @@ class calculater():
         while True:
             if self.y == 0:
                 print("Error! Zero Division Not Possible. Try Again")
-                self.get_input()
+                self.y_input()
+                break
             else:
                 div = self.x / self.y
                 return div
     
-    def square(self):
-        user_input = int(input("Enter number for finding square : "))
-        square = user_input * user_input
-        return square
+    def square(self,val):
+        return val * val
     
     
     def result(self):
-        print("=== Simple Calculater ===")
+        print("\n========== Simple Calculater ==========")
         print("\nChoose the Operater:")
         print(f'''
               1. Addition
@@ -49,17 +52,18 @@ class calculater():
               7. Exit''')
         
         while True:
-            choise = int(input("Choose any One [1/2/3/4/5/6/7] : "))
+            choise = int(input("\nChoose any One [1/2/3/4/5/6/7] : "))
             if choise == 1:
-                print( f"\nAddition : {self.addition()}")
+                print( f"Addition {self.x} + {self.y} : {self.addition()}")
             elif choise == 2:
-                print( f"\nSubtraction : {self.subtraction()}")
+                print( f"Subtraction {self.x} - {self.y} : {self.subtraction()}")
             elif choise == 3:
-                print( f"\nMultiplication : {self.multiplication()}")
+                print( f"Multiplication {self.x} X {self.y} : {self.multiplication()}")
             elif choise == 4:
-                print( f"\nDivision : {self.division()}") 
+                print( f"Division {self.x} / {self.y} : {self.division()}") 
             elif choise == 5:
-                print( f"\nSquare : {self.square()}")
+                num = int(input("Enter number for square : "))
+                print( f"Square of {num} : {self.square(num)}")
             elif choise == 6:
                 self.x ,self.y = 0 , 0
                 print("Result Clear.")
