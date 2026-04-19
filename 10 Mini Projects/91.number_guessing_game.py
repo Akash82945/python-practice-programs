@@ -49,6 +49,6 @@ def number_guessing_game():
 while True:
     number_guessing_game()
     user_input = input("Do you want to play again. (y/n): ").lower()
-    if user_input == 'y':
+    if user_input != 'y':
         print("Thanks Visit Again.👋")
-    break
+        break
