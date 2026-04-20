@@ -3,7 +3,7 @@ import random
 computer = random.randint(1,100)
 attempts = 0
 
-print("Random Guessing Game.")
+print("Random Number Guessing Game.")
 
 while True:
     user = int(input("Guess the number between 1 to 100: "))
