@@ -55,6 +55,7 @@ class Calculater():
             elif choice == 5:
                 self.x = 0
                 self.y = 0
+                print("All Clear.")
             elif choice == 6:
                 break
             else:

@@ -15,5 +15,5 @@ while True:
         print("Try Smallest number.")
     else:
         print("Congurts 🎉")
-        print(f"Correct! You tool {attempts} attempts.")
+        print(f"Correct! You Guess correct in {attempts} attempts.")
         break
