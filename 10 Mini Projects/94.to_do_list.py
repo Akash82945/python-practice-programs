@@ -54,7 +54,7 @@ def to_do_list():
             idx = int(input("Enter Task no to delete: ")) -1
             if 0 <= idx < len(task):
                 removed = task.pop(idx)
-                print(f"Removed : {removed['input_task']}")
+                print(f"Removed : {removed['Task']}")
             else:
                 print("Invalid task NO. ")
                 
