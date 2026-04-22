@@ -17,4 +17,4 @@ quotes = [
 # print(quotes_dict["Steve Jobs"])
 
 random_quote = random.choice(quotes)
-print(f'\nToday Inspiration :\nAuthor Namr: "{random_quote["author"]}\nQuotes : "{random_quote["text"]}\n')
+print(f'\nToday Inspiration :\nAuthor Namr: "{random_quote["author"]}"\nQuotes : "{random_quote["text"]}"\n')

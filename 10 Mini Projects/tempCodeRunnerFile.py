@@ -1,5 +1,5 @@
 import random
-from P95_random_quote_generator import quotes
+from 95_random_quote_genetator import quotes
 
 
 def to_do_list():
@@ -47,8 +47,8 @@ def to_do_list():
             if 0 <= idx < len(task):
                 task[idx]['done'] = True
                 print("Great Job!")
-                random_quote = random.choice(quotes)
-                print(f"Daily Inspiration.\nAuthor : {random_quote['author']}\nQuotes : {random_quote['text']}")
+                random = random.choice(quotes)
+                print(f"Daily Inspiration.\nAuthor : {'author'}\nQuotes : {'text'}")
             else:
                 print("Invalid Task NO.")
             
