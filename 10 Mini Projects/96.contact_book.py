@@ -98,7 +98,6 @@ def contact_book():
                         if choose_input == "phone":
                             target['phone'] = input(f"Enter new phone (Current phone {target['phone']}) : ")
                             print("Updated Successfully.")
-                            
                         elif choose_input == 'email':
                             target['email'] = input(f"Enter new email (Current Email {target['email']}) : ")
                             print("Updated Successfully.")
