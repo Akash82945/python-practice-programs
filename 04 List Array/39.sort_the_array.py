@@ -95,13 +95,13 @@ n = int(input("Enter the length of array: "))
 original_array = []
 
 for x in range(n):
-    original_array.append(int(input(f"Values {x+1}")))
+    original_array.append(int(input(f"Values {x+1}: ")))
     
 print(f"Original array {original_array}")
 print("1. Bubble sort")
 print("2. Selection srot")
 
-choice = int(input("Choose the algorithms. {1/2}"))
+choice = int(input("Choose the algorithms. {1/2}: "))
 
 temp_array = original_array.copy()
 if choice == 1:
