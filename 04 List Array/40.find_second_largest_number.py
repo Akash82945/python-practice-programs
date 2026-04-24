@@ -13,6 +13,6 @@ def find_second_largest(array):
             second_largest = i
     return second_largest
 
-array = [23,54,23,5,6,4]
+array = [23,54,26,5,6,4]
 print(f"Your original array {array}")
 print(f"Second largest number {find_second_largest(array)}")
