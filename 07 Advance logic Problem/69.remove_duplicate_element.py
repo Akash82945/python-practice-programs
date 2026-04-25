@@ -49,7 +49,7 @@ def remove_duplicate_element(my_array):
     # Step 4: Return the list which now contains only the first occurrence of each element.
     return duplicate_list
 
-# --- Execution ---
+# ---- Execution ----
 # Taking space-separated input from the user.
 my_input = input("Enter array values: ")
 
