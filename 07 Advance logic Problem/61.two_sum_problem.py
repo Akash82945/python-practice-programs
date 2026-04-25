@@ -35,10 +35,11 @@ def sum_two_number(my_array, target):
     
         if required in seen_number:
             return [seen_number[required],i]
-        seen_number[curent_value]= i
+        seen_number[curent_value] = i
     return "no pair"
 
 n = int(input("Enter lenght of array: "))
+
 my_array = []
 for i in range(n):
     i = int(input(f"Enter value {i}: "))
