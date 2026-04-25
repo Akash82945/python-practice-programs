@@ -1,9 +1,5 @@
-# file = open("Notes.txt" , "w")
-# file.write(input("Enter Notes: "))
-# file.close
-
 #Create File Method function
-print("Write your note in NOtes file.")
+print("Write your note in Notes file.")
 def create_file(new_file):
     file = open("File Handling/Note.txt" , "a")
     file.write("\n"+new_file)
