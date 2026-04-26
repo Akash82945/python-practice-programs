@@ -23,4 +23,4 @@ while temp > 0:
 if num==reverse_num:
     print(f"{num } is palindrome.")
 else:
-    print(f"{num} is not plindrome")
+    print(f"{num} is not palindrome")
