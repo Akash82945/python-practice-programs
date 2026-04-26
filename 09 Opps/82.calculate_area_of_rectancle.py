@@ -1,3 +1,5 @@
+#Class of finding area of rectangle.
+
 class Rectangle():
     
     def __init__(self,lenght,breath):
