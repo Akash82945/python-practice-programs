@@ -1,4 +1,4 @@
-#check palindrome number
+#Check palindrome number
 num = int(input("Enter the number: "))
 
 s_num = str(num)
