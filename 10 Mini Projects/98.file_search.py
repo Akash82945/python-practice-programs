@@ -3,7 +3,7 @@ import os
 def file_finder():
     print(" ===== Mini File Search Engine =====")
     
-    dictonary = input("Enter folder name? (eg. C./ or D./) : ")
+    dictonary = input("Enter folder name? (eg. C:/ or D:/) : ")
     filename_to_search = input("Enter File name : ").lower()
     
     if not os.path.exists(dictonary):
