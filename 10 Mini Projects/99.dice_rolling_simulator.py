@@ -1,3 +1,4 @@
+# Dice Rolling Mini Project
 import random
 
 def dice_rolling():
@@ -67,4 +68,7 @@ def dice_rolling():
             print("Good Bye!")
             break
     
-dice_rolling()
+# dice_rolling()
+
+if __name__ == '__main__':
+    dice_rolling()
