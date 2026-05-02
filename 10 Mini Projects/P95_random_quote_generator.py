@@ -1,3 +1,4 @@
+# Mini Project Random Quotes
 import random
 
 quotes = [
