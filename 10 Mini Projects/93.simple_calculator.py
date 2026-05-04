@@ -1,3 +1,4 @@
+#simple calculater
 class Calculater():
     
     def __init__ (self):
