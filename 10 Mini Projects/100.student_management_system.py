@@ -39,11 +39,15 @@ def student_management_system():
                 continue
             
             student_class.sort(key=lambda x: x['roll'])
-            print("\n=====Student List=====")
+            print("\n" + "="*80)
+            print("=====Student List=====")
+            print("="*80)
             
-            student_class.sort(key=lambda x: x['roll'])
+            print(f"{'Sr No.':<5} | {'Roll No.':<10} | {'Student Name':<20} | {'Branch':<12} | {'Sem':<5} | {'Course':<10}")
+            print("-"*80)
             for i, s in enumerate(student_class, 1):
-                print(f"{i} {s['roll']} | {s['name']} | {s['branch']} | {s['semester']} | {s['course']}")
+                print(f"{i:<5} | {s['roll']:<10} | {s['name']:<20} | {s['branch']:<12} | {s['semester']:<5} | {s['course']:<10}")
+            print("="*80)
                     
                     
         elif user_input == 2:
@@ -82,12 +86,12 @@ def student_management_system():
                     print(f"Updating details for {s['name']}. leave blank to keep current value.")
                     
                     new_name = input(f"Enter New Name ({s['name']}): ").strip()
-                    new_branch = input(f"Enter New Name ({s['branch']}): ").strip()
-                    new_sem = input(f"Enter New Name ({s['semester']}): ").strip()
-                    new_course = input(f"Enter New Name ({s['course']}): ").strip()
+                    new_branch = input(f"Enter New Branch ({s['branch']}): ").strip()
+                    new_sem = input(f"Enter New Semester ({s['semester']}): ").strip()
+                    new_course = input(f"Enter Course Name ({s['course']}): ").strip()
                     
                     if new_name: s['name'] = new_name
-                    if new_branch: s['breanch'] = new_branch
+                    if new_branch: s['branch'] = new_branch
                     if new_sem: s['semester'] = new_sem
                     if new_course: s['course'] = new_course
                     
@@ -99,7 +103,7 @@ def student_management_system():
                 
                 if student_found:
                     print("No Student found with that roll.")
-                    
+                        
         
         elif user_input == 4:
             del_stu = input("Enter roll which student you delete : ")
