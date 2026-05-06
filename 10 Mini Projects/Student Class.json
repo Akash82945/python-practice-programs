@@ -12,5 +12,12 @@
         "branch": "AIML",
         "semester": "6",
         "course": "B-Tech"
+    },
+    {
+        "roll": "2304331",
+        "name": "Gaurav Konozia",
+        "branch": "AIML",
+        "semester": "6",
+        "course": "btech"
     }
 ]

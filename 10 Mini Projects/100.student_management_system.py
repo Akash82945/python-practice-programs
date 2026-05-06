@@ -1,3 +1,4 @@
+# Mini Projects of Student Management System
 import json
 import os
 
