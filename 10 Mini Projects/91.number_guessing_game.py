@@ -1,3 +1,5 @@
+# Mini project of Number guessing Game
+
 # import random
 
 # computer = random.randint(1,100)
@@ -18,6 +20,7 @@
    
    
    
+# Mini project of Number guessing Game
 import random
 
 def number_guessing_game():
