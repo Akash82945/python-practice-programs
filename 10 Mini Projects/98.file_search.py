@@ -1,3 +1,4 @@
+# Mini project of File Search
 import os
 
 def file_finder():
