@@ -1,3 +1,4 @@
+# Cube of Given User Input
 num = int(input("Enter the number: "))
 
 cube = num ** 3
