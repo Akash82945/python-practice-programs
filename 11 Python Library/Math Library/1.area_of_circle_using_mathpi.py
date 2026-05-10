@@ -42,53 +42,95 @@ def power_number():
     return f"{sqr} is the square of {user_input}"
 
 def calculater():
-    
-    print("""
-          1. Addition
-          2. Subtraction
-          3. Subtraction
-          4. Multiplication
-          6. Square root
-          7. factorial
-          8. Area of objects
-          9. Exit
-          """)
-    
-    choise = int(input("Enter your choise : "))
-    
-    if choise == 1:
-        a = float(input("Enter value : "))
-        b = float(input("Enter value : "))
-        sum = a + b
-        print(f"Sum = {sum}")
+    while True:
+        print("""
+            1. Addition
+            2. Subtraction
+            3. Multiplication
+            4. Division
+            5. Square root
+            6. factorial
+            7. Area of objects
+            8. Exit
+            """)
         
-    elif choise == 2:
-        pass
-    
-    elif choise == 3:
-        pass
-    
-    elif choise == 4:
-        pass
-    
-    elif choise == 5:
-        pass
-    
-    elif choise == 6:
-        pass
-    
-    elif choise == 6:
-        pass
-    
-    elif choise == 7:
-        pass
-    
-    elif choise == 8:
-        pass
-    
-    elif choise == 9:
-        pass
-    
+        choise = int(input("Enter your choise : "))
+        
+        if choise == 1:
+            a = float(input("Enter value : "))
+            b = float(input("Enter value : "))
+            sum = a + b
+            print(f"Addition = {sum}")
+            
+        elif choise == 2:
+            a = float(input("Enter value : "))
+            b = float(input("Enter value : "))
+            sub = a - b
+            print(f"Subtraction = {sub}")
+        
+        elif choise == 3:
+            a = float(input("Enter value : "))
+            b = float(input("Enter value : "))
+            mul = a * b
+            print(f"Multiplication = {mul}")
+        
+        elif choise == 4:
+            a = float(input("Enter value : "))
+            b = float(input("Enter value : "))
+            div = a / b
+            print(f"Division = {div}")
+        
+        elif choise == 5:
+            user_input = float(input("Enter Number for calculating square root : "))
+            sqt = math.sqrt(user_input)
+            print(f"{sqt} is the square root of {user_input}")
+        
+        elif choise == 6:
+            input_fact = int(input("Enter for calculating factorial : "))
+            fact = math.factorial(input_fact)
+            print(f"{fact} is the factorial of {input_fact}")
+        
+        elif choise == 7:
+            while True:
+                print("""
+                      1. Rectangle
+                      2. Square
+                      3. Triangle
+                      4. Circle
+                      5. Exit
+                      """)
+                
+                choise = int(input("Enter your choise : "))
+                if choise == 1:
+                    print("Calculating the Area of Rectangle.")
+                    lenght = float(input("Enter value of lenght : "))
+                    width = float(input("Enter value of width : "))
+                    area_rectangle = lenght * width
+                    print(f"{area_rectangle} is the Area of Recrtangle.")
+                elif choise == 2:
+                    print("Calculating the Area of Square.")
+                    side = float(input("Enter value of side : "))
+                    area_square = side **2
+                    print(f"Area of square : {area_square}")
+                elif choise == 3:
+                    print("Calculating the Area of Triangle.")
+                    base = float(input("Enter base value: "))
+                    height = float(input("Enter height value: "))
+                    area_triangle = 0.5*base*height
+                    print(f"{area_triangle} is Area of Triangle.")
+                elif choise == 4:
+                    print("Calculating the Area of Circle.")
+                    radius = float(input("Enter radius value : "))
+                    area_circle = math.pi*(radius*radius)
+                    print(f"{area_circle} is the Area of Circle.")
+                else:
+                    print("Invalid Choise.")
+            
+        
+        elif choise == 8:
+            break
+        
+        
     
 def factorial():
     fact = int(input("Enter number for calculate factorial : "))
