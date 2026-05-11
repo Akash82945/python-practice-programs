@@ -37,7 +37,7 @@ def square_root():
     return f"Square root of user input : {sqr_root}"
 
 def power_number():
-    user_input = input(input("Enter number of calculating square : "))
+    user_input = float(input("Enter number of calculating square : "))
     sqr = user_input**2
     return f"{sqr} is the square of {user_input}"
 
@@ -129,7 +129,7 @@ def calculater():
         
         elif choise == 8:
             break
-        
+    return
         
     
 def factorial():
