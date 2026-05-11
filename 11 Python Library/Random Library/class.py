@@ -18,5 +18,7 @@ import random
 # shu = random.shuffle(number)
 # print(number)
 
+
+# dice rolling
 dice = random.randint(1,6)
 print(f"Dice number : {dice}")
