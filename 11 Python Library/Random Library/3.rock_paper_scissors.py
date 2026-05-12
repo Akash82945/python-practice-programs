@@ -1,14 +1,20 @@
 import random
 
-choise = ["rock","paper","scissors"]
+count = 0
+print("===== Welcome to Rock Paper Scissor Game =====")
+while True: 
+    choise = ["rock","paper","scissors",'r','p','s']
 
-bot = random.choice(choise)
+    bot = random.choice(choise)
 
-user = input("Enter your choice : ").lower()
+    user = input("Enter your choice [r/p/s]: ").lower()
 
-if bot == user:
-    print("Congurates")
-else:
-    print("Try Again!")
+    if bot == user:
+        count += 1
+        print("Congurates. You Win.🎉")
+        print(f"You win this gane {count} times.")
+    else:
+        print("Try Again!🔁")
 
-print(bot)
+    if user == 'q':
+        break
