@@ -161,7 +161,7 @@ These programs focus on **string manipulation and text processing in Python**.
 
 ---
 
-✅ **Status:** In Progress / Completed
+✅ **Status:** In Progress next Questions
 
 
 ---
