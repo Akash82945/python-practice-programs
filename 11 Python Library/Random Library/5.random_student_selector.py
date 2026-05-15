@@ -1,3 +1,4 @@
+# Select random student from students list
 import random
 
 students = [
