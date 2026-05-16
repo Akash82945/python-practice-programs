@@ -1,17 +1,19 @@
 import datetime
 import time
 import os
+import sys
+
+os.system('cls' if os.name == 'nt' else 'clear')
 
 try :
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\033[H", end="")
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
         
         print("*"*30)
         print("  Digital Clock  ")
         print("*"*30)
         print(f" Time : {current_time}")
-        print(f" Time : {current_time}", end="\r")
         print("*"*30)
         print("\nPress Ctrl + C to exit")
         
