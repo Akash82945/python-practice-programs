@@ -11,10 +11,16 @@
 
 
 # Current time
-import datetime
+# import datetime
 # current_time = datetime.datetime.now().time()
 # current_time = datetime.datetime.now().time().replace(microsecond=0)
 # print(current_time)
+
+
+# Formatting Date and timr
+import datetime
 current_time = datetime.datetime.now()
+formate_date = current_time.strftime("%d-%m-%y")
 formate_time = current_time.strftime("%H:%M:%S")
 print(formate_time)
+print(formate_date)
