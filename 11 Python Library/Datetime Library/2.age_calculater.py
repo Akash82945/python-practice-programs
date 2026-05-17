@@ -1,27 +1,4 @@
-# import datetime
-
-# from dateutil.relativedelta import relativedelta
-
-# print("===== Simple Age Calculater =====")
-
-# birt_year = int(input("Enter Birth Year (eg. 2004): "))
-# birt_month = int(input("Enter Birth Month (1-12) : "))
-# birth_dat = int(input("Enter Birth Day (1-31) : "))
-
-# birth_date = datetime.date(birt_year,birt_month,birth_dat)
-# today = datetime.date.today()
-
-# age = relativedelta(today,birth_date)
-
-# print("Your Age: ")
-# print(f"{age.days} : {age.months} : {age.years}")
-
-
-
-
-
-
-
+# Age Calculater Simulater
 import datetime
 import calendar
 
