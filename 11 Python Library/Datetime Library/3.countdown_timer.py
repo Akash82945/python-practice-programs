@@ -1,7 +1,7 @@
 import datetime
 import os
 import time
-from playsound import playsound
+from playsound import playsound  # type: ignore
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
