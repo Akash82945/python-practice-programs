@@ -1,6 +1,8 @@
 import datetime
 import os
 import time
+from playsound import playsound
+
 os.system('cls' if os.name == 'nt' else 'clear')
 
 print("=" * 35)
@@ -35,6 +37,9 @@ try:
     print("\n\n" + '*'*30)
     print("Times up! Countdown Finished")
     print ('*'*30)
+    
+    print("Playing alarm music...")
+    playsound("faaah.mp3")
         
         
 except ValueError:
