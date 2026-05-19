@@ -1,5 +1,7 @@
 import time
 import os
+import sys
+from playsound import playsound  #type: ignore
 
 
 # Delay program
@@ -44,23 +46,64 @@ import os
 
 
 # Reverse Timer
+# import time
+# import os
+# import sys
+# from playsound import playsound  #type: ignore
 
-input_hour = int(input("Enter timer Hours : "))
-input_min = int(input("Enter minutes : "))
-input_sec = int(input("Enter second : "))
-
-total = (input_hour * 3600) + (input_min * 60) + input_sec
+def get_time():
+    try:
+        while True:
+            try:
+                user_input = input("Enter Time format -> HH:MM:SS or MM:SS or SS : ")
+                
+                parts = list(map(int, user_input.split(":")))
+                
+                if len(parts) == 3:
+                    h,m,s = parts
+                elif len(parts) == 2:
+                    h,m,s = 0, parts[0],parts[1]
+                elif len(parts) == 1:
+                    h,m,s = 0,0,parts[0]
+                else:
+                    print("Invalid time format.")
+                    continue
+                if m >= 60 or s >= 60 or h < 0 or m < 0 or s < 0:
+                    print("Also invlid time.")
+                    continue
+                return (h*3600)+(m*60)+s
+        
+            except ValueError:
+                print("Invalid Inputs")
+    
+    except KeyboardInterrupt:
+        print("Stopped by user.")
+        sys.exit()
+        
+total = get_time()
 os.system('cls' if os.name == 'nt' else 'clear')
 
-min,sec = divmod(input_sec, 60)
+print(" ===== Countdown Timer =====") 
+min,sec = divmod(total, 60)
 hrs,min = divmod(min,60)
 time_set = f"{hrs:02d} : {min:02d} : {sec:02d}"
-print(f"You Set Time : {time_set}")
-    
-while total >= 0:
-    print(total)
-    total -= 1
-    time.sleep(1)
 
+print("-"*30)
+print(f"You Set Time ({time_set})")
+print("-"*30)
+
+try:
+    while total >= 0:
+        min,sec = divmod(total, 60)
+        hrs,min = divmod(min,60)
+        time_set = f"{hrs:02d} : {min:02d} : {sec:02d}"
+        print('Time left : ',time_set, " ")
+        total -= 1
+        time.sleep(1)
+
+    print("Time's Up!")
+    print("Timer alert....")
+    playsound("faaah.mp3")
     
-    
+except KeyboardInterrupt:
+    print("Timer Stopped by user.")
