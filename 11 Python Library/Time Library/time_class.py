@@ -1,6 +1,7 @@
 import time
 import os
 import sys
+import datetime
 from playsound import playsound  #type: ignore
 
 
@@ -113,28 +114,30 @@ from playsound import playsound  #type: ignore
 
 
 # Time Zone converter
-# local_time = time.strftime("%H:%M:%S")
-# date = time.strftime("%d-%b-%Y")
-# global_time = time.gmtime()
-# live_time = time.localtime(time.time())
-# print(time.strftime("%d-%m-%Y %H:%M:%S" , live_time))
+local_time = time.strftime("%H:%M:%S")
+date = time.strftime("%d-%b-%Y")
+print(f"PC local Time : {local_time}")
+print(f"Date : {date}")
+global_time = time.gmtime()
+format_global_time = time.strftime("%H:%M:%S",global_time)
+format_global_date = time.strftime("%d-%m-%Y",global_time)
+print("Global UTC Time : ", format_global_time)
+print("Global UTC Date : ", format_global_date)
 
-# print(f"PC local Time : {local_time}")
-# print(f"Date : {date}")
-# # print(f"Global Time : {global_time}")
-# for gt in global_time:
-#     print(gt)
+india_time = datetime.datetime.now()
+global_utc_time = datetime.datetime.utcnow()
+time_diff = india_time - global_utc_time
+print('Time Different Global to Local Time : ',time_diff)
+
 
 
 
 
 # Advance: Convert string time to real time
-# string_time = input("Emter Time format -> (HH:MM:SS) : ")
-string_time = "25-12-2026 18:30:00"
-real_time1 = "%d-%m-%Y %H:%M:%S"
-real_time = time.strptime(string_time,real_time1)
-# print(real_time)
-format_time = time.strftime("%H:%M:%S",real_time)
-format_date = time.strftime("%d-%m-%Y",real_time)
-print(format_time)
-print(format_date)
+# string_time = "25-12-2026 18:30:00"
+# real_time1 = "%d-%m-%Y %H:%M:%S"
+# real_time = time.strptime(string_time,real_time1)
+# format_time = time.strftime("%H:%M:%S",real_time)
+# format_date = time.strftime("%d-%m-%Y",real_time)
+# print(format_time)
+# print(format_date)
