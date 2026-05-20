@@ -3,7 +3,7 @@ import os
 
 os.system("cls" if os.name == 'nt' else 'clear')
 
-# Uncomment these line to print normal stopwatch.
+# Uncomment these line to print normal Stopwatch.
 # print(" ===== Stop Watch Simulator =====")
 # print("\nPress (Ctrl + C) to stop time...")
 

@@ -1,5 +1,6 @@
 import time
 import os
+from playsound import playsound  #type: ignore
 
 os.system("cls" if os.name == 'nt' else 'clear')
 
@@ -51,3 +52,4 @@ while total >= 0:
     total -= 1
     
 print("Time Up!")
+playsound("faaah.mp3")
