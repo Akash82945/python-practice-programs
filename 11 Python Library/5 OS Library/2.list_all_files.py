@@ -13,4 +13,3 @@ target_folder = r"C:\Users\LENOVO\Documents"
 files = os.listdir(target_folder)
 for file in files:
     print(file)
-print(len(files))
