@@ -2,8 +2,8 @@ import shutil
 
 
 # Copy File
-# copy_file = shutil.copy("PyWhatkit_DB.txt","backup.txt")
-# print("copy done")
+copy_file = shutil.copy("PyWhatkit_DB.txt","backup.txt")
+print("copy done")
 
 
 
@@ -14,5 +14,5 @@ import shutil
 
 
 # Delete Entire folder
-del_fol = shutil.rmtree(r'C:\Users\LENOVO\Documents\Zoom')
-print('Done')
+# del_fol = shutil.rmtree(r'C:\Users\LENOVO\Documents\Zoom')
+# print('Done')
