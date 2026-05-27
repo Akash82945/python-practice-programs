@@ -8,25 +8,33 @@ import os
 class MiniDB:
     
     def __init__(self,filename='db.json'):
-        self.filename = filename
+        self.filename = Path(filename)
         self.data = self._load_data()
         
+        
     def _load_data(self):
-        if not os.path.exists(self.filename):
+        
+        if not self.filename.exists():
             return {}
+        
         try:
-            with open(self.filename,'r', encoding='utf-8') as file:
-                return json.load(file)
+            content = self.filename.read_text(encoding='utf-8')
+            return json.loads(content) if content.strip() else {}
+        
         except json.JSONDecodeError:
             print("Warning! new file open soon...")
             return {}
         
+        
     def _save_data(self):
-        with open(self.filename,'w', encoding='utf-8') as file:
-            json.dump(self.data, file, indent=4, ensure_ascii=False)
+        
+        self.filename.parent.mkdir(parents=True, exist_ok=True)
+        json_string = json.dumps(self.data , indent=4, ensure_ascii=False)
+        self.filename.write_text(json_string, encoding='utf-8')
         
     
     def create(self, key, value):
+        
         if key in self.data:
             print(f"Error! {key} This data is already exist.")
             return False
@@ -35,13 +43,18 @@ class MiniDB:
         self._save_data()
         return True
     
+    
+    
     def read(self, key=None):
+        
         if key is None:
             return self.data
         return self.data.get(key, "Error, Deata not found.")
     
     
+    
     def update(self, key, new_value):
+        
         if key not in self.data:
             print(f"Error! {key} Data Not found.")
             return False
@@ -49,6 +62,8 @@ class MiniDB:
         self.data[key] = new_value
         self._save_data()
         return True
+    
+    
     
     def delete(self, key):
         if key in self.data:
@@ -60,7 +75,7 @@ class MiniDB:
     
     
 
-file_path = r"C:\Users\LENOVO\Desktop\Practice set\python-practice-programs\11 Python Library\8 JSON Library\data.json"
+file_path = Path(r"C:\Users\LENOVO\Desktop\Practice set\python-practice-programs\11 Python Library\8 JSON Library\data.json")
 
 db = MiniDB(file_path)
 
@@ -74,17 +89,24 @@ while True:
           4. Delene Data.
           5. Exit 
           ''')
+    
     try:
         user_input = int(input("\nChoose Your Option [1/2/3/4/5] : "))
+    
     except ValueError:
         print("Please Enter valid choise.")
+        continue
+    
+    
     if user_input == 1:
         print('---Current Database---')
         current_data = db.read()
+        
         if not current_data:
             print('Database is Empty.')
         else:
             print(json.dumps(current_data,indent=4, ensure_ascii=False))
+    
     
     elif user_input == 2:
         print('---Create New Entry---')
@@ -94,6 +116,7 @@ while True:
         value = {'name' : name, 'role' : role}
         db.create(key,value)
         print('\n')
+        
         
     elif user_input == 3:
         print('---Update Data---')
@@ -106,15 +129,18 @@ while True:
             db.update(key,value)
         else:
             print(f'Key {key} not found.')
+      
             
     elif user_input == 4:
         print('---Delete Data---')
         key = input("Enter key to Delete: ").strip()
         db.delete(key)
         
+        
     elif user_input == 5:
         print("Thankyou for using MINI Database.")
         break
+    
     
     else:
         print("Invalid Choise! Please Choose Right Opthon.")
