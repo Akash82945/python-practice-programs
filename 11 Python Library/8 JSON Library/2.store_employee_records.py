@@ -27,6 +27,12 @@ loaded_data = json.loads(file_path.read_text())
 print(loaded_data)
 print(json.dumps(loaded_data,indent=4))
 
+
+
+
+
+
+# OOPs Format Code
 # class Employee():
     
 #     def __init__(self,id,name,dept,salary):
