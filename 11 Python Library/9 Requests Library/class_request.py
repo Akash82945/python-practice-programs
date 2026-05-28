@@ -1,4 +1,4 @@
-import requests
+# import requests
 
 
 # First internet request
@@ -46,7 +46,54 @@ import requests
 
 
 
-url = "https://api.github.com/users/Akash82945"
-response = requests.get(url)
-data = response.json()
-print(data)
+# url = "https://api.github.com/users/Akash82945"
+# response = requests.get(url)
+# data = response.json()
+# print(data)
+
+
+
+
+
+
+
+# # University Student Data
+# import requests
+# import json
+
+# domain = "https://universities.hipolabs.com"
+# end_point = '/search?country=india'
+
+# url = f"{domain}{end_point}"
+
+# try:
+#     response = requests.get(url, timeout=10)
+#     response.raise_for_status()
+#     data = response.json()
+#     print(json.dumps(data[:5], indent=4))
+# except requests.exceptions.RequestException as e:
+#     print(f"Error {e}")
+
+
+
+
+
+
+import requests
+import json
+url = 'https://api.open-meteo.com/v1/forecast'
+
+query_params = {
+    'latitude': 28.6129,
+    'longitude': 77.2390,
+    'current_weather':'true'
+}
+
+try:
+    response = requests.get(url, params=query_params, timeout=10)
+    response.raise_for_status()
+    data = response.json()
+    print(json.dumps(data['current_weather'], indent=4))
+
+except requests.exceptions.RequestException as e:
+    print(f"error : {e}")
