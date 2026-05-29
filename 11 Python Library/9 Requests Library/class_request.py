@@ -7,18 +7,22 @@
 
 
 
+
+# Get all HTML of this link
 # response = requests.get("https://api.github.com")
 # print(response.text)
 
 
+
+
+
+# Get All deatils of user with HTML and py Dict
 # url = "https://api.github.com/users/Akash82945"
 
 # try:
 #     response = requests.get(url)
 #     response.raise_for_status()
-    
 #     data = response.json()
-    
     
 #     print('Github profil details')
 #     print(f'''
@@ -29,7 +33,6 @@
 #           ''')
     
 #     repo_url = data.get('repos_url')
-    
 #     repo_response = requests.get(repo_url)
 #     repo_response.raise_for_status()
     
@@ -46,6 +49,8 @@
 
 
 
+
+# Get Json format data
 # url = "https://api.github.com/users/Akash82945"
 # response = requests.get(url)
 # data = response.json()
@@ -78,7 +83,7 @@
 
 
 
-
+# Weather Api
 import requests
 import json
 url = 'https://api.open-meteo.com/v1/forecast'
