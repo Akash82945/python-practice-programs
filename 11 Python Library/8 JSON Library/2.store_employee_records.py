@@ -16,11 +16,13 @@ emp_data = {
 
 # Buit in Function
 file_path.write_text(json.dumps(emp_data, indent=4))
+
 # with open(file_path,'w') as file:
 #     json.dump(emp_data,file,indent=4)
 
 # Buit in Function
 loaded_data = json.loads(file_path.read_text())
+
 # with open(file_path,'r') as file:
     # loaded_data = json.load(file)
 
