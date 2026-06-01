@@ -1,5 +1,5 @@
-from geopy.geocoders import Nominatim
-import requests
+# from geopy.geocoders import Nominatim    #type: ignore
+# import requests
 
 # # Find Location Coordinates (latitude / longitude)
 
@@ -26,6 +26,9 @@ import requests
 # get_city_coordinates(city)
 
 
+
+import requests
+from geopy.geocoders import Nominatim    #type: ignore
 
 def get_weather(city_name):
     
