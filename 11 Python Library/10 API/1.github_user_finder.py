@@ -1,7 +1,7 @@
 import requests
 
 
-# User finder
+# User github users details
 
 def find_user(username):
     
