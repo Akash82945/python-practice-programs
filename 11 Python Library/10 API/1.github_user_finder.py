@@ -1,7 +1,7 @@
 import requests
 
 
-# User github users details
+# User github users details using Github API
 
 def find_user(username):
     
