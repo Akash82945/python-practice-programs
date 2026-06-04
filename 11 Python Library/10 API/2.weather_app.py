@@ -30,8 +30,7 @@ def get_location(city_name):
         # print(data)
         
         current = data['current_condition'][0]
-        
-        # wind_mile = current['windgustmiles']
+        wind_mile = current['windspeedMiles']
         cloudcover = current['cloudcover']
         humidity = current['humidity']
         temp_c = current['temp_C']
@@ -45,8 +44,9 @@ def get_location(city_name):
               City Name : {city}
               Observation Time : {observation_time}
               Temperature : {temp_c}'C  &  {temp_f}'F
-              Cloud cover : {cloudcover}
-              Humidity : {humidity}
+              Cloud cover : {cloudcover}%
+              Humidity : {humidity}%
+              Wind/Miles : {wind_mile}M/H
               UV Index : {uv_idx}
               ''')
         
