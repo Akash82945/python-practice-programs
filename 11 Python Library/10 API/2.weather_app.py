@@ -50,6 +50,24 @@ def get_location(city_name):
               UV Index : {uv_idx}
               ''')
         
+        
+        print('=== 3-Day weather Prediction ===')
+        
+        for day in data['weather']:
+            date = day['date']
+            max_temp = day['maxtempC']
+            min_temp = day['mintempC']
+            
+            weather_desc = day['hourly'][4]['weatherDesc'][0]['value']
+            
+            print(f"""
+                Date : {date}
+                Max Temperature : {max_temp}'C
+                Min Temperature : {min_temp} 'C
+                Condition : {weather_desc}
+                  """)
+        
+        
     except requests.exceptions.RequestException as e:
         print(f"Error : {e}")
         
