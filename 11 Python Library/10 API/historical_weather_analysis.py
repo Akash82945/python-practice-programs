@@ -37,7 +37,7 @@ try:
     plt.title("Amritsar Weather Analysis - January 2026")
     plt.xlabel('Dates')
     plt.ylabel("Temperature('C)")
-    # plt.xticks(rotation=45)
+    plt.xticks(rotation=45)
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
