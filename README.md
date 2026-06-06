@@ -147,7 +147,6 @@ These programs focus on **string manipulation and text processing in Python**.
 
 ## ⚙️ Level 9 – OOPs ( Completed. )
 
-
 81. Create Student Class.
 82. Calculate area of rectange.
 83. Class of bank account.
@@ -158,6 +157,54 @@ These programs focus on **string manipulation and text processing in Python**.
 88. Constructor Example.
 89. Libraby Management Class.
 90. Simple calculater class.
+
+
+
+
+## ⚙️ Level 10 – Mini Projects ( Completed. )
+
+91. Number Guessing Game.
+92. Password Generator.
+93. Simple Calculater.
+94. To Do list.
+95. 
+96. Contact Book.
+97. Quize Game.
+98. File Search.
+99. Dice Rolling Simmulator.
+100. Student Management System.
+
+
+
+## ⚙️ Level 11 – Python Library ( Completed. )
+
+101. Random Library.
+102. Math Library.
+103. Datetime Library.
+104. Time Library.
+105. OS Library.
+106. Shutil Library.
+107. Pathlib Library.
+108. Json Library.
+109. Requests Library.
+110. BeautifulSoup Library.
+
+
+
+## ⚙️ Level 11 – Modrate Projects ( In Progress. )
+
+111. .
+112. .
+113. .
+114. .
+115. .
+116. .
+117. .
+118. .
+119. .
+120. .
+
+
 
 ---
 
@@ -176,3 +223,4 @@ I am continuously practicing Python and uploading new programs to track my progr
 ---
 
 ⭐ Feel free to explore the programs and follow my coding journey!
+
