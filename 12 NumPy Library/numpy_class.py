@@ -75,6 +75,25 @@ import numpy as np
 
 
 
+# Dot product
+# a = np.array([1,2])
+# b = np.array([3,4])
+# print(np.dot(a,b))
+
+a = np.random.randint(1,12,size=3)
+b = np.random.randint(1,12,size=3)
+c = np.random.randint(1,12,size=3)
+print(a)
+print(b)
+print(c)
+ab_dot = np.dot(a,b)
+abc_dot = ab_dot*c
+# ab_dot = np.cross(a,b)
+# abc_dot = np.dot(np.cross(a,b),c)
+print(ab_dot)
+print(abc_dot)
+
+
 # Create 3D matrix
 # data = [1,2,3,4,5,6,7,8,9,10,11,12]
 # arr = np.array(data)
@@ -140,6 +159,6 @@ import numpy as np
 
 
 # Shuffling List
-list1 = np.arange(10,50, size=5)
-list2 = np.random.shuffle(list1)
-print(list1)
+# list1 = np.random.randint(10,50,size=5)
+# np.random.shuffle(list1)
+# print(list1)
