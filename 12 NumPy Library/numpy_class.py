@@ -29,5 +29,117 @@ import numpy as np
 
 
 # Create array Using range fun
-arr = np.arange(2,10,2)
-print(arr)
+# Real uae : Data simulation & Loop Replacement
+# arr = np.arange(2,10,2)
+# print(arr)
+
+
+
+# Reshape Array
+# Real use : Image data reshape & Ml Preprocessing
+# arr = np.arange(6)
+# new_arr = arr.reshape(2,3)
+# print(new_arr)
+
+
+
+# Find mean
+# arr = np.array([20,23,23,553,53])
+# arr_mean = np.mean(arr)
+# print(f"Mean of Array : {arr_mean}")
+
+
+
+# Sum of array
+# arr = np.array([20,23,23,553,53])
+# sum_arr = np.sum(arr)
+# print(f"Sum of array ; {sum_arr}")
+
+
+
+# Find min and max values
+# arr = np.array([20,23,23,553,53])
+# min = np.min(arr)
+# max = np.max(arr)
+# print(f"Minimum Value : {min}")
+# print(f"Maximum Value : {max}")
+
+
+
+
+# Create randmon data
+# use : AI data simulation
+# arr = np.random.rand(3)
+# arr = np.random.randint(1,50,3)
+# print(arr)
+
+
+
+# Create 3D matrix
+# data = [1,2,3,4,5,6,7,8,9,10,11,12]
+# arr = np.array(data)
+# matrix = arr.reshape(2,2,3)
+# print(matrix)
+
+# Using random value
+# matrix_3d = np.random.randint(1,121,size=(3,2,4))
+# print(matrix_3d)
+
+
+
+# Create Dice simulator using numpy
+# while True:
+#     dice = np.random.randint(1,7)
+#     user_input = input("Press 'enter' to continue & press 'q' for quiet : ")
+#     if user_input == "":
+#         print(f"Dice no : {dice}")
+#     elif user_input == 'q':
+#         break
+#     else:
+#         print('Error')
+        
+        
+        
+
+# Create Array fron -10 to +10
+# arr = np.random.randint(-10,11,4)
+# print(arr)       
+
+
+
+
+# Choise function
+# coin = ['head','tail']
+# coin_result = np.random.choice(coin, size=5)
+# print(f"Coin result : {coin_result}")
+
+
+
+
+# Shuffle function
+# color = ['Red', 'Yellow', 'Orange', 'Pink']
+# shuffl_color = np.random.shuffle(color)
+# print(color)
+
+
+
+
+# Random randn function
+# normal_data = np.random.randn(2,3)
+# print('Normal distribution data : \n',normal_data)
+
+
+
+
+# Rock Paper Scisor
+# game = ['Rock', 'Paper', 'Scisors']
+# games = np.random.choice(game)
+# print(games)
+
+
+
+
+# Shuffling List
+list1 = np.arange(10,50, size=5)
+list2 = np.random.shuffle(list1)
+print(list1)
