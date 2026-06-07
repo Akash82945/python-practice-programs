@@ -203,19 +203,38 @@ import numpy as np
 
 
 
-import time
 # Array vectorization
 # Normal list method (slow)
-start = time.time()
-prices = [10,20,30]
-new_prices = [p + 2 for p in prices]
-end = time.time()
-print(f"Prices : {prices}")
-print(f"New Prices after add $2 : {new_prices}")
-print(f"Time taken : {end-start}")
+# prices = [10,20,30]
+# new_prices = [p + 2 for p in prices]
+# print(f"Prices : {prices}")
+# print(f"New Prices after add $2 : {new_prices}")
 
 # NumPy method (fast)
-prices_arr = np.array([10,20,30])
-new_prices_arr = prices_arr + 2
-print(f"Price : {prices_arr}")
-print(f"New Prices after add 2$ : {new_prices_arr}")
+# prices_arr = np.array([10,20,30])
+# new_prices_arr = prices_arr + 2
+# print(f"Price : {prices_arr}")
+# print(f"New Prices after add 2$ : {new_prices_arr}")
+
+
+import time
+
+size = 100000
+nw_list = list(range(1,size+1))
+st = time.time()
+n_list = [p + 2 for p in nw_list]
+ed = time.time()
+print(nw_list[:10])
+print(n_list[:10])
+print(ed - st)
+
+# arr = np.arange(0,size+1)
+# price = np.array(list)
+
+# start = time.time()
+# new_price = price + 2
+# end = time.time()
+
+# print(f"Price : {price[:10]}")
+# print(f"New Price : {new_price[:10]}")
+# print(f"Time taken : {end - start}")
