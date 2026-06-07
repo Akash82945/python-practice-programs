@@ -1,7 +1,7 @@
 import numpy as np
 
 
-# Array inspection
+# 1. Array inspection
 # arr = np.array([[1,2,4],[4,5,6]])
 # print(f"Array {arr.ndim}D : \n{arr}")
 # print(f"Dimension of Array : {arr.ndim}")
@@ -10,7 +10,7 @@ import numpy as np
 
 
 
-# Array vectorization
+# 2. Array vectorization
 # Normal list method (slow)
 # prices = [10,20,30]
 # new_prices = [p + 2 for p in prices]
@@ -26,7 +26,7 @@ import numpy as np
 
 
 
-# Array indexing and slicing
+# 3. Array indexing and slicing
 # 1D array
 # price = np.arange(1,1000)
 # slice_data = price[::100]
@@ -43,18 +43,48 @@ import numpy as np
 
 
 
-# Basic Aggregation 
-price = np.random.randint(1, 100, size=15)
-min = np.min(price)
-max = np.max(price)
-mean = np.mean(price)
-median = np.median(price)
+# 4. Basic Aggregation 
+# price = np.random.randint(1, 100, size=15)
+# min = np.min(price)
+# max = np.max(price)
+# mean = np.mean(price)
+# median = np.median(price)
+
+# print(f'''
+# Price : {price}
+# Min price : {min}
+# Max price : {max}
+# Mean : {mean:.2f}
+# Median : {median}
+# ''')
 
 
-print(f'''
-Price : {price}
-Min price : {min}
-Max price : {max}
-Mean : {mean:.2f}
-Median : {median}
-''')
+
+
+
+# Boolean Masking
+# marks = np.random.randint(1,101,5)
+
+# One condition
+# passed_sub = marks[marks>60]
+
+# Two condition AND(&) , OR(|)
+# passed_sub = marks[(marks>60) & (marks<80)]
+# print(f"Marks : {marks}")
+# print(f"Passed subjects (60<100) : {passed_sub}")
+
+
+# 2D array 
+matrix_marks = np.random.randint(1,101,(3,4))
+# one condition
+# passed_sub = matrix_marks[matrix_marks>60]
+
+# two condition
+passed_sub = matrix_marks[(matrix_marks>60) & (matrix_marks<80)]
+print(f"\nMatrix Marks : \n{matrix_marks}")
+print(f"\nPassed Subject : \n{passed_sub}")
+
+matrix_marks[matrix_marks < 40] = 40
+
+print("\nफेल होने वाले छात्रों को ग्रेस मार्क्स देने के बाद (2D शेप वैसा ही रहेगा):")
+print(matrix_marks)
