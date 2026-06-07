@@ -5,6 +5,30 @@ import numpy as np
 # arr = np.array([2,3,4,5,6])
 # print(arr)
 
+# 1D array
+# price = np.array([10.50, 20.00, 15.75])
+
+# 2D array
+# matrix = np.array([
+#     [1,2,3],
+#     [4,5,6]
+# ])
+
+# Generate Sequential number (like range)
+# sequence = np.arange(0,12,2)
+
+# Create array using default values
+# zeros = np.zeros(5)
+# ones = np.ones((2,4))
+
+# Print All Arrays
+# print(f'''
+# 1D array : {price}\n
+# 2D array : \n{matrix}\n
+# Sequence array : {sequence}\n
+# Default zero array : {zeros}\n
+# Default ones array :\n {ones}
+#       ''')
 
 
 # Convert list to array
@@ -80,18 +104,21 @@ import numpy as np
 # b = np.array([3,4])
 # print(np.dot(a,b))
 
-a = np.random.randint(1,12,size=3)
-b = np.random.randint(1,12,size=3)
-c = np.random.randint(1,12,size=3)
-print(a)
-print(b)
-print(c)
-ab_dot = np.dot(a,b)
-abc_dot = ab_dot*c
+# a = np.random.randint(1,12,size=3)
+# b = np.random.randint(1,12,size=3)
+# c = np.random.randint(1,12,size=3)
+# print(a)
+# print(b)
+# print(c)
+# ab_dot = np.dot(a,b)
+# abc_dot = ab_dot*c
 # ab_dot = np.cross(a,b)
 # abc_dot = np.dot(np.cross(a,b),c)
-print(ab_dot)
-print(abc_dot)
+# print(ab_dot)
+# print(abc_dot)
+
+
+
 
 
 # Create 3D matrix
@@ -162,3 +189,33 @@ print(abc_dot)
 # list1 = np.random.randint(10,50,size=5)
 # np.random.shuffle(list1)
 # print(list1)
+
+
+
+
+
+# Array inspection
+# arr = np.array([[1,2,4],[4,5,6]])
+# print(f"Array {arr.ndim}D : \n{arr}")
+# print(f"Dimension of Array : {arr.ndim}")
+# print(f"Shape of array : {arr.shape}")
+# print(f"Data type of array : {arr.dtype}")
+
+
+
+import time
+# Array vectorization
+# Normal list method (slow)
+start = time.time()
+prices = [10,20,30]
+new_prices = [p + 2 for p in prices]
+end = time.time()
+print(f"Prices : {prices}")
+print(f"New Prices after add $2 : {new_prices}")
+print(f"Time taken : {end-start}")
+
+# NumPy method (fast)
+prices_arr = np.array([10,20,30])
+new_prices_arr = prices_arr + 2
+print(f"Price : {prices_arr}")
+print(f"New Prices after add 2$ : {new_prices_arr}")
