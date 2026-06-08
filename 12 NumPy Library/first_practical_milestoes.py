@@ -217,6 +217,20 @@ import numpy as np
 
 
 # The "Sensor Glitch" Challenge
-sensor_data = np.array([22.5, 23.1, 999.0, 21.8, 999.0, 24.0])
-sensor_data[sensor_data == 999] = 23
-print(f"New sensor data : {sensor_data}")
+# sensor_data = np.array([22.5, 23.1, 999.0, 21.8, 999.0, 24.0])
+# sensor_data[sensor_data == 999] = 23
+# print(f"New sensor data : {sensor_data}")
+
+
+
+
+# The "Data Fusion" Challenge
+# teamA = np.array([80,85,90])
+# teamB = np.array([70,75,80])
+teamA = np.array([[80],[85],[90]])
+teamB = np.array([[70],[75],[80]])
+
+# combine_v = np.vstack((teamA,teamB))
+combine_h = np.hstack((teamA,teamB))
+# print(combine_v)
+print(combine_h)
