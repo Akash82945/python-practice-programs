@@ -169,17 +169,54 @@ import numpy as np
 
 
 
-# Data manipulation
-data = np.array([
-    [10, 20, 30],
-    [5,  15, 25],
-    [2,  4,  6]
-])
+# # Data manipulation
+# data = np.array([
+#     [10, 20, 30],
+#     [5,  15, 25],
+#     [2,  4,  6]
+# ])
 
-# Find max value in entire matrix
-max = np.max(data)
-print(f"Max Value : {max}")
+# # Find max value in entire matrix
+# max = np.max(data)
+# print(f"Max Value : {max}")
 
-# Calculate average value of each column
-avg_each_col = np.mean(data, axis=0)
-print(f"Average val of each col : {avg_each_col}")
+# # Calculate average value of each column
+# avg_each_col = np.mean(data, axis=0)
+# print(f"Average val of each col : {avg_each_col}")
+
+
+
+
+
+# # Boolean masking
+# ages = np.array([12, 25, 17, 40, 9, 31, 15, 52])
+
+# # Create a filtered array called adults that contains only ages greater then or equal 18.
+# adult = ages[ages>=18]
+# print(f"Adults : {adult}")
+
+# # Average of adults
+# adult_avg = np.mean(adult)
+# print(f"Average of adults : {adult_avg}")
+
+
+
+
+
+# # Convert celsius to fahrenheit Cities (Rows), 4 Days (Columns)
+# celsius_temps = np.array([
+#     [20, 22, 24, 21],
+#     [30, 31, 29, 32],
+#     [10, 12, 11, 13]
+# ])
+
+# fahrenheit = (celsius_temps * 1.8) + 32
+# print(f"Fahrenheit : \n{fahrenheit}")
+
+
+
+
+# The "Sensor Glitch" Challenge
+sensor_data = np.array([22.5, 23.1, 999.0, 21.8, 999.0, 24.0])
+sensor_data[sensor_data == 999] = 23
+print(f"New sensor data : {sensor_data}")
