@@ -24,6 +24,6 @@ print(f"Random dataset : {random_dataset}")
 
 
 
-# Reshape Dataset into matrix
+# Task 5 : Reshape Dataset into matrix
 matrix_dataset = random_dataset.reshape(5,5)
 print(f"Random Dataset Matrix : \{matrix_dataset}")
