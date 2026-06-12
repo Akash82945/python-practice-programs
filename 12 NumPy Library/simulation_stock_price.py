@@ -9,12 +9,16 @@ def stock_price():
     days = int(input("Enter Number of days : "))
     np.random.seed(42)
 
-    daily_changes = np.random.normal(loc=0, scale=1.5, size=days)
-    stock_movements = np.cumsum(daily_changes)
+    # daily_changes = np.random.normal(loc=0, scale=1.5, size=days)
+    daily_changes_in_percent = np.random.normal(loc=0.0005, scale=0.015, size=days)
+    
+    # stock_movements = np.cumsum(daily_changes)
+    stock_movements = np.cumsum(daily_changes_in_percent)
+    
     stock_price = start_price + stock_movements
+    stock_price = start_price*np.exp(np.cumsum(daily_changes_in_percent))
 
-    # print(f"Day 1 : ${stock_price[0]:.2f} (changes {daily_changes[0]:.2f})")
-    for price,changes in zip(stock_price,daily_changes):
+    for price,changes in zip(stock_price,daily_changes_in_percent):
         print(f"Day {days} : ${price:.2f} : ({changes:.2f})")
         days += 1
         
