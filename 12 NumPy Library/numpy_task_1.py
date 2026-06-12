@@ -30,6 +30,7 @@ import numpy as np
 
 
 
+
 # Task 7 : Compute dot product for ML concept
 a = np.array([23,43,65,23,43])
 b = np.array([12,43,12,65,87])
@@ -37,7 +38,6 @@ bias = 10
 
 dot_of_ab = np.dot(a,b) + bias
 print(dot_of_ab)
-
 
 
 # Rows = Days (Mon, Tue), Columns = Items (Item A, Item B, Item C)
@@ -55,9 +55,3 @@ prices = np.array([
 
 matrix_dot = sales @ prices
 print(matrix_dot)
-
-relu = np.maximum(0,matrix_dot)
-print(f"relu : {relu}")
-
-sig = 1 / (1 + np.exp(-(matrix_dot)))
-print(f"sig : {sig}")
