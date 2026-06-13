@@ -7,6 +7,7 @@ import numpy as np
 attendance = ['Present','Absent']
 np.random.seed(42)     # fixe random value to permanent
 
+
 # Create Dataset
 attendance_dataset = np.random.choice(attendance, size=20, p=[0.7, 0.3] )
 # Reshape into matrix (each row indicate Student and column indicate attendance)
