@@ -42,8 +42,10 @@ raw_data = {
 
 df = pd.DataFrame(raw_data)
 
+df.to_csv("Sales.csv", index= False)
+
 print("=== 50 Real-World Random Dataset for Pandas Learning ===")
-print(df)
+print(df.head())
 
 
 
