@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 
 np.random.seed(42)
-
 num_records = 50
 
 # 1. Order IDs (1001 से 1050)
