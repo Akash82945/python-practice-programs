@@ -30,6 +30,14 @@ order_dates = np.random.choice(dates_pool, size=num_records)
 nan_indices = np.random.choice(num_records, size=5, replace=False)
 amounts[nan_indices] = np.nan
 
+# 8. Add payment method
+payment_pool = ['Cash', 'UPI', 'Card']
+payment = np.random.choice(payment_pool, size=num_records)
+
+
+# 9. Add location 
+location_pool = ['Amritsar', 'Delhi', 'Noida', 'Mumbai', 'Bangalore']
+location = np.random.choice(location_pool, size=num_records)
 
 
 raw_data = {
@@ -38,7 +46,9 @@ raw_data = {
     'Category': categories,
     'Amount_INR': amounts,
     'Quantity': quantities,
-    'OrderDate': order_dates
+    'OrderDate': order_dates,
+    'Payment Mode' : payment,
+    'Location' : location
 }
 
 df = pd.DataFrame(raw_data)
@@ -47,10 +57,40 @@ customer_size = len(df['OrderID'])
 df['Salary'] = np.random.randint(20000,50000, size=customer_size)
 
 
+# Add Discount 10% or 15%
+df['Discount'] = np.random.randint(15,20, size=customer_size)
+
+# Final Amount
+df['Final Amount'] = df['Amount_INR'] * (1 - df['Discount']/100).round(2)
+
+
+arranged_column = [
+    'OrderID',
+    'CustomerID',
+    'Salary',
+    'OrderDate',
+    'Category',
+    'Quantity',
+    'Amount_INR',
+    'Discount',
+    'Final Amount',
+    'Payment Mode',
+    'Location'
+]
+
+df = df[arranged_column]
+
+
+# Find Amount_INR null
+null_mask = df['Amount_INR'].isnull()
+df.loc[null_mask, 'Discount'] = 0
+df.loc[null_mask, 'Final Amount'] = 0
+df.loc[null_mask, 'Payment Mode'] = 'Unknown'
+
 df.to_csv("Sales.csv", index= False)
 
 print("=== 50 Real-World Random Dataset for Pandas Learning ===")
-print(df.head())
+print(df)
 
 
 
