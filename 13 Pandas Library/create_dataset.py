@@ -30,6 +30,8 @@ order_dates = np.random.choice(dates_pool, size=num_records)
 nan_indices = np.random.choice(num_records, size=5, replace=False)
 amounts[nan_indices] = np.nan
 
+
+
 raw_data = {
     'OrderID': order_ids,
     'CustomerID': customers,
@@ -40,6 +42,10 @@ raw_data = {
 }
 
 df = pd.DataFrame(raw_data)
+
+customer_size = len(df['OrderID'])
+df['Salary'] = np.random.randint(20000,50000, size=customer_size)
+
 
 df.to_csv("Sales.csv", index= False)
 
