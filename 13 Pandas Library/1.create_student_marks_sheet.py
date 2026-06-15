@@ -14,11 +14,11 @@ name_pool = [f"STU0{i}" for i in range(1,11)]
 student_name = np.random.choice(name_pool, size=student_size)
 
 
-math_marks = np.random.randint(20,90, size=student_size)
-english_marks = np.random.randint(20,90, size=student_size)
-python_marks = np.random.randint(20,90, size=student_size)
-c_marks = np.random.randint(20,90, size=student_size)
-java_marks = np.random.randint(20,90, size=student_size)
+math_marks = np.random.randint(33,99, size=student_size)
+english_marks = np.random.randint(33,99, size=student_size)
+python_marks = np.random.randint(33,99, size=student_size)
+c_marks = np.random.randint(33,99, size=student_size)
+java_marks = np.random.randint(33,99, size=student_size)
 
 
 
@@ -49,7 +49,6 @@ student_data ={
 
 df = pd.DataFrame(student_data)
 
-df.to_csv("Student_marksheet.csv", index=False)
 
 # Total Column
 df['Total Marks'] = df['Maths'] + df['English'] + df['Python'] + df['C lang'] + df['Java']
