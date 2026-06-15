@@ -39,4 +39,4 @@ pivot_tabel = df.pivot_table(
 
 pivot_tabel['Total'] = pivot_tabel.sum(axis=1)
 pivot_tabel = pivot_tabel.sort_values(by= 'Total', ascending=False)
-print(pivot_tabel)
+print(pivot_tabel.reset_index())
