@@ -42,5 +42,5 @@ df = pd.read_csv('Student_marksheet.csv')
 
 # Loac CSV file
 
-# loaded_csv = pd.read_csv("Sales.csv")
-# print(loaded_csv.head())
+loaded_csv = pd.read_csv("Sales.csv")
+print(loaded_csv.head())
