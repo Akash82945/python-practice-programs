@@ -3,7 +3,6 @@ import numpy as np
 
 df = pd.read_csv('Student_marksheet.csv')
 #print(df.head())
-
 # 2. Find Average marks
 # Average Column is already present in Dataset
 # average_marks = (df['Total Marks']/5)
