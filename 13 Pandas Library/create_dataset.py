@@ -82,10 +82,10 @@ df = df[arranged_column]
 
 
 # Find Amount_INR null
-null_mask = df['Amount_INR'].isnull()
-df.loc[null_mask, 'Discount'] = 0
-df.loc[null_mask, 'Final Amount'] = 0
-df.loc[null_mask, 'Payment Mode'] = 'Unknown'
+# null_mask = df['Amount_INR'].isnull()
+# df.loc[null_mask, 'Discount'] = 0
+# df.loc[null_mask, 'Final Amount'] = 0
+# df.loc[null_mask, 'Payment Mode'] = 'Unknown'
 
 df.to_csv("Sales.csv", index= False)
 
