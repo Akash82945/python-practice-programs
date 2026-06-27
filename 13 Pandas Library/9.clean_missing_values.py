@@ -27,13 +27,5 @@ df = pd.read_csv("Sales.csv")
 
 
 # fill values
-# fill_null = df.fillna(0)
-# print(fill_null) 
-
-
-
-# fill with mean,median or mode for machine learning
-# fill_mean = 
-df['Salary'].fillna(df['Salary'].median())
-# print(fill_mean)
-print(df)
+fill_null = df.fillna(0)
+print(fill_null) 

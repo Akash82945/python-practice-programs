@@ -30,7 +30,7 @@ df = pd.read_csv('Sales.csv')
 # print(f"Customer Category : {customer_product}")
 
 # if 'Fitness' in customer_product:
-#     print(f"\nNO of customer who buy Fitness Kit : {customer_product['Fitness']}")
+    print(f"\nNO of customer who buy Fitness Kit : {customer_product['Fitness']}")
     
 # Find unique customer
 unique_customer = df.groupby('Category')['CustomerID'].unique()

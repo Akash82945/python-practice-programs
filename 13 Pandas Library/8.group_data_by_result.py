@@ -36,5 +36,6 @@ pass_fail_pivot = df.pivot_table(
 pass_fail_pivot['Total Student'] = pass_fail_pivot.sum(axis = 1)
 print(pass_fail_pivot.reset_index())
 
+# Pandas
 
 
