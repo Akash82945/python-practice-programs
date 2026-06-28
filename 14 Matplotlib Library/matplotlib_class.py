@@ -37,7 +37,7 @@ plt.grid(True)
 # 7. Scatter plot 
 a = [1,2,3] 
 b = [12,13,141]
-plt.scatter(a,b)
+plt.scatter(a,b, color = 'red', label= 'student data')
 plt.title('Scatter Plot')
 plt.legend()
 plt.xlabel(a)
@@ -48,14 +48,14 @@ plt.show()
 
 
 # 9. Multiple lines
-plt.plot([1,2,3],[10,20,30])
-plt.plot([1,2,3],[30,20,10])
+# 10. Save plot as PNG
+plt.plot([1,2,3],[10,20,30], label= 'A')
+plt.plot([1,2,3],[30,20,10], label = 'B')
 plt.title('Multiple lines')
 plt.xlabel('X Axis')
 plt.ylabel('Y Axis')
 plt.grid(True)
+plt.legend()
 plt.savefig('Chart.png')
 plt.show()
 
-
-# Save plot as PNG
