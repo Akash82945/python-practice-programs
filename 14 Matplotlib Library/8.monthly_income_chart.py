@@ -8,17 +8,16 @@ df = pd.read_csv('Sales.csv')
 
 df['OrderDate'] = pd.to_datetime(df['OrderDate'])
 df = df.sort_values('OrderDate')
-
 monthly_df = df.groupby(df['OrderDate'].dt.to_period('M'))['Salary'].sum().reset_index()
 
-month = monthly_df['OrderDate'].astype(str)
-salary = monthly_df['Salary']
+month = df['OrderDate'].astype(str)
+salary = df['Salary']
 
 plt.plot(month, salary, label='Monthly Income.', marker='o', markersize=4)
 plt.title('Monthly Income Chart.')
 plt.xlabel('Months Date.')
 plt.ylabel('Income INR.')
 # plt.grid(True)
+plt.xticks(rotation=90)
 plt.tight_layout()
-plt.xticks(rotation=30)
 plt.show()
