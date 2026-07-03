@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+# Create Performance Dashboard
+
 df = pd.read_csv('Sales.csv')
 
 df['Final Amount'] = pd.to_numeric(df['Final Amount'], errors='coerce')
@@ -50,6 +52,8 @@ axes[1,1].grid(True, linestyle='--', alpha=0.7)
 
 for i,v in enumerate(catogery_quantity):
     axes[1,1].text(i,v + 0.2, str(v), ha='center', color='darkred')
+
+
 
 plt.tight_layout(rect=[0,0,1,0.95])
 plt.show()
